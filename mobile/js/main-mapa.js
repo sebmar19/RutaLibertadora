@@ -1,7 +1,9 @@
 $(window).on("load", function () {
-    $(".loader-mapa").fadeOut(300);
-    $(".btn-entrar-batalla").fadeIn(300);
-    $(".btn-entrar-batalla").on("click", entrarBatalla);
+    $(".loader-mapa").fadeOut(300, function () {
+        $(".btn-entrar-batalla").fadeIn(300);
+        $(".btn-entrar-batalla").on("click", entrarBatalla);
+    });
+
 });
 
 var infoMapa;
@@ -51,6 +53,12 @@ function avanzarRuta() {
         $("#mapa-imagen-container").css("background-image", "url(../img/mapa-boceto-m.jpg)");
         $("#mapa-imagen-container").css("background-size", "660%");
         $("#mapa-imagen-container").css("background-position", coordenadas[0] + "% " + coordenadas[1] + "%");
+
+        $('#mapa-imagen-container').addClass('blur');
+
+        setTimeout(function () {
+            $('#mapa-imagen-container').removeClass('blur');
+        }, 250);
     }
 
     var numPuntos = Object.keys(infoMapa).length;
@@ -86,6 +94,11 @@ function avanzarRuta() {
             }, 2000);
 
             $("#mapa-imagen-container").css("background-position", coordenadas[0] + "% " + coordenadas[1] + "%");
+            $('#mapa-imagen-container').addClass('blur');
+
+            setTimeout(function () {
+                $('#mapa-imagen-container').removeClass('blur');
+            }, 250);
 
 
         } else if (infoPuntoActual.tipo == "Batalla") {
@@ -126,6 +139,11 @@ function avanzarRuta() {
             }, 2000);
 
             $("#mapa-imagen-container").css("background-position", coordenadas[0] + "% " + coordenadas[1] + "%");
+            $('#mapa-imagen-container').addClass('blur');
+
+            setTimeout(function () {
+                $('#mapa-imagen-container').removeClass('blur');
+            }, 250);
 
 
         }
@@ -179,6 +197,11 @@ function retrocederRuta() {
             }, 2000);
 
             $("#mapa-imagen-container").css("background-position", coordenadas[0] + "% " + coordenadas[1] + "%");
+            $('#mapa-imagen-container').addClass('blur');
+
+            setTimeout(function () {
+                $('#mapa-imagen-container').removeClass('blur');
+            }, 250);
 
 
         } else if (infoPuntoActual.tipo == "Batalla") {
@@ -219,6 +242,11 @@ function retrocederRuta() {
             }, 2000);
 
             $("#mapa-imagen-container").css("background-position", coordenadas[0] + "% " + coordenadas[1] + "%");
+            $('#mapa-imagen-container').addClass('blur');
+
+            setTimeout(function () {
+                $('#mapa-imagen-container').removeClass('blur');
+            }, 250);
 
 
         }

@@ -197,7 +197,7 @@ button:active {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background: #000;
+    background: #444;
     z-index: 1000;
     top: 0;
     left: 0;
@@ -211,18 +211,80 @@ button:active {
 .lightbox-salir {
     position: absolute;
     width: 90%;
-    height: 50%;
+    height: 40%;
     top: 25%;
-    background: #FFF;
+    background: #EBE1CF;
     left: 5%;
+    -webkit-box-shadow: 12px 11px 24px 0px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 12px 11px 24px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: 12px 11px 24px 0px rgba(0, 0, 0, 0.6);
+    font-family: "Martel", serif;
+    color: #0F2728;
 }
+
+.lightbox-inicial:after,
+.lightbox-salir:after {
+    position: absolute;
+    width: 3px;
+    height: 110%;
+    top: -5%;
+    border-radius: 10px;
+    background: #B93032;
+    left: -3px;
+    content: " ";
+    display: block;
+    max-height: 250px;
+}
+
+.lightbox-inicial p,
+.lightbox-salir p {
+    width: 90%;
+    margin: 0;
+    margin-left: 5%;
+    text-align: center;
+}
+
+
 
 .btn-entrar-batalla {
     display: none;
+    background: url(../img/btn-light-normal.svg);
+    width: 243px;
+    height: 38px;
+    font-family: "Tabac Sans", sans-serif;
+    font-size: 18px;
+    color: #F2EADB;
+    text-align: left;
+    margin: auto;
+    padding-left: 36px;
+    margin-top: 40px;
 }
 
 /*Loader*/
 
 .loader-mapa {
     width: 40px;
+    margin: auto;
+    display: block;
+    margin-top: 30px;
+}
+
+/*Blur*/
+
+.blur {
+    animation: blur 250ms;
+}
+
+@keyframes blur {
+    0% {
+        -webkit-filter: blur(0px);
+    }
+
+    50% {
+        -webkit-filter: blur(5px);
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+    }
 }
