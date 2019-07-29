@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.95 16.71">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: #80a8a3;
+            }
+
+            .btn-nav-mapa:hover .cls-1 {
+                fill: #FFE7B5;
+            }
+
+        </style>
+    </defs>
+    <title>btn-flecha-izq</title>
+    <g id="Capa_2" data-name="Capa 2">
+        <g id="Content">
+            <path class="cls-1" d="M0,8.35,8.2.16A.54.54,0,0,1,9,.92L1.53,8.35,9,15.79a.54.54,0,1,1-.76.76Z" />
+            <path class="cls-1" d="M.22,8.35a.54.54,0,0,1,.54-.54H15.42a.54.54,0,0,1,.53.54.54.54,0,0,1-.53.54H.76A.54.54,0,0,1,.22,8.35Z" />
+        </g>
+    </g>
+</svg>
