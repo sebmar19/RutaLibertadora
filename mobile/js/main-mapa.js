@@ -9,7 +9,7 @@ var infoMapa;
 var puntoMapa = 0;
 
 $(document).ready(function () {
-    $.getJSON("https://embed.eltiempo.digital/infografias/2019/08/ruta-libertadora/data/data.json?fsvd", function (data) {
+    $.getJSON("https://embed.eltiempo.digital/infografias/2019/08/ruta-libertadora/data/data.json?fsvs", function (data) {
         infoMapa = data;
         console.log(infoMapa);
     });
@@ -36,16 +36,29 @@ function avanzarRuta() {
 
     puntoMapa++;
 
+
+
     if (puntoMapa == 1) {
+
+        var coordenadas = infoMapa[puntoMapa].coordenadas;
+
+        coordenadas = coordenadas.split(",");
+
         $(".altimetria-num").fadeIn(200);
         $(".num-temperatura").fadeIn(200);
         $(".barra-soldados .num-texto").fadeIn(200);
         $(".num-titulo").fadeIn(200);
+        $("#mapa-imagen-container").css("background-image", "url(../img/mapa-boceto-m.jpg)");
+        $("#mapa-imagen-container").css("background-size", "660%");
+        $("#mapa-imagen-container").css("background-position", coordenadas[0] + "% " + coordenadas[1] + "%");
     }
 
     var numPuntos = Object.keys(infoMapa).length;
     if (puntoMapa <= numPuntos) {
         var infoPuntoActual = infoMapa[puntoMapa];
+        var coordenadas = infoPuntoActual.coordenadas;
+        coordenadas = coordenadas.split(",");
+
 
         if (infoPuntoActual.tipo == "Parada") {
             //Cambio de datos
@@ -72,7 +85,7 @@ function avanzarRuta() {
                 "width": valAlturas + "%"
             }, 2000);
 
-
+            $("#mapa-imagen-container").css("background-position", coordenadas[0] + "% " + coordenadas[1] + "%");
 
 
         } else if (infoPuntoActual.tipo == "Batalla") {
@@ -111,6 +124,8 @@ function avanzarRuta() {
             $(".barra-alti").animate({
                 "width": valAlturas + "%"
             }, 2000);
+
+            $("#mapa-imagen-container").css("background-position", coordenadas[0] + "% " + coordenadas[1] + "%");
 
 
         }
@@ -135,6 +150,8 @@ function retrocederRuta() {
     var numPuntos = Object.keys(infoMapa).length;
     if (puntoMapa > 0) {
         var infoPuntoActual = infoMapa[puntoMapa];
+        var coordenadas = infoPuntoActual.coordenadas;
+        coordenadas = coordenadas.split(",");
 
         if (infoPuntoActual.tipo == "Parada") {
             //Cambio de datos
@@ -161,7 +178,7 @@ function retrocederRuta() {
                 "width": valAlturas + "%"
             }, 2000);
 
-
+            $("#mapa-imagen-container").css("background-position", coordenadas[0] + "% " + coordenadas[1] + "%");
 
 
         } else if (infoPuntoActual.tipo == "Batalla") {
@@ -200,6 +217,8 @@ function retrocederRuta() {
             $(".barra-alti").animate({
                 "width": valAlturas + "%"
             }, 2000);
+
+            $("#mapa-imagen-container").css("background-position", coordenadas[0] + "% " + coordenadas[1] + "%");
 
 
         }
