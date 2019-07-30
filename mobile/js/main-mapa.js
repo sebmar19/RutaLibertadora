@@ -24,6 +24,7 @@ function entrarBatalla() {
     $("#lightbox-inicial-cont").fadeOut(500);
     $(".btn-mapa-der").on("click", avanzarRuta);
     $(".btn-mapa-izq").on("click", retrocederRuta);
+    $(".btn-salir").on("click", desertar);
 }
 //Esta función sirve para avanzar a través de los puntos de la Ruta
 //Apenas Inicia, aumenta en 1 el valor del punto actual y guarda en infoPuntoActual el Objeto correspondiente a ese punto
@@ -50,6 +51,8 @@ function avanzarRuta() {
         $(".num-temperatura").fadeIn(200);
         $(".barra-soldados .num-texto").fadeIn(200);
         $(".num-titulo").fadeIn(200);
+        $(".tem-titulo").fadeIn(200);
+        $(".altimetrias").fadeIn(200);
         $("#mapa-imagen-container").css("background-image", "url(../img/mapa-boceto-m.jpg)");
         $("#mapa-imagen-container").css("background-size", "660%");
         $("#mapa-imagen-container").css("background-position", coordenadas[0] + "% " + coordenadas[1] + "%");
@@ -258,7 +261,10 @@ function retrocederRuta() {
 
 }
 
+function desertar() {
 
+    $(".lightbox-salir-cont").fadeIn(300);
+}
 
 
 function finalizar() {

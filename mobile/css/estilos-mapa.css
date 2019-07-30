@@ -76,10 +76,19 @@ button:active {
 }
 
 .btn-nav-mapa {
-    width: 26px;
-    height: 0;
+    width: 36px;
+    height: 36px;
     position: absolute;
-    top: -10px;
+    top: -3px;
+    background: #C23032;
+    border-radius: 50px;
+    padding-left: 6px;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+
+.btn-nav-mapa img {
+    width: 80%;
 }
 
 .btn-mapa-der {
@@ -105,13 +114,16 @@ button:active {
     right: 0;
     position: absolute;
     overflow: hidden;
-    border-bottom: 2px solid #185557;
 }
 
 .num-titulo {
-    text-align: center;
     margin-top: 0;
     display: none;
+    border-top: 2px solid #185557;
+    color: #185557;
+    font-family: "Tabac Sans", sans-serif;
+    font-weight: 600;
+    text-align: right;
 }
 
 .num-texto {
@@ -119,25 +131,36 @@ button:active {
     position: absolute;
     top: -35px;
     display: none;
+    color: #185557;
+    font-family: "Tabac Sans", sans-serif;
 }
 
 .barra-soldados {
     width: 10px;
     height: 80%;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     top: 100%;
     background: #673332;
-    right: 35px;
-    position: absolute;
+    margin-left: 35px;
+    position: relative;
+}
+
+.barra-wrapper {
+    height: 88%;
+    overflow: hidden;
 }
 
 .altimetrias {
     width: 100%;
-    height: 80px;
+    height: 14%;
     background: url(../img/altimetria.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
     bottom: 5px;
     right: 0;
     position: absolute;
+    display: none;
 }
 
 .barra-alti {
@@ -146,7 +169,7 @@ button:active {
     position: absolute;
     top: 0;
     left: 0;
-    background: #fff;
+    border-right: 2px solid #673332;
 }
 
 .altimetria-num {
@@ -155,6 +178,8 @@ button:active {
     top: 5px;
     margin: 0;
     display: none;
+    color: #185557;
+    font-family: "Tabac Sans", sans-serif;
 }
 
 .temperatura {
@@ -164,14 +189,24 @@ button:active {
     height: 30px;
 }
 
+.tem-titulo {
+    margin-top: -10px;
+    color: #185557;
+    font-family: "Tabac Sans", sans-serif;
+    font-weight: 600;
+    display: none;
+}
+
 .barra-temperatura {
     width: 0%;
-    height: 20px;
+    height: 10px;
     position: absolute;
     left: 0;
-    top: 5px;
+    top: 13px;
     background: #888;
     overflow: visible !important;
+    border-radius: 10px;
+    background: #673332;
 }
 
 .num-temperatura {
@@ -179,6 +214,9 @@ button:active {
     position: absolute;
     right: -40px;
     display: none;
+    top: -4px;
+    color: #185557;
+    font-family: "Tabac Sans", sans-serif;
 }
 
 .modulo-mini-mapa {
@@ -195,7 +233,8 @@ button:active {
 /*LightBox*/
 
 #lightbox-inicial-cont,
-.lightbox-salir-cont {
+.lightbox-salir-cont,
+.light-video {
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -244,6 +283,8 @@ button:active {
     margin: 0;
     margin-left: 5%;
     text-align: center;
+    line-height: 24px;
+    font-size: 18px;
 }
 
 
@@ -262,9 +303,40 @@ button:active {
     margin-top: 40px;
 }
 
+.btn-retirarse,
+.btn-regresar {
+
+    background: url(../img/btn-light-normal.svg);
+    width: 243px;
+    height: 38px;
+    font-family: "Tabac Sans", sans-serif;
+    font-size: 18px;
+    color: #F2EADB;
+    text-align: left;
+    margin: auto;
+    padding-left: 36px;
+    margin-top: 40px;
+}
+
 .btn-entrar-batalla:hover {
     background: url(../img/btn-light-hover.svg);
     color: #334520;
+}
+
+.btn-salir {
+    background: url(../img/btn-desertar.svg);
+    width: 95px;
+    height: 30px;
+    font-family: "Tabac Sans", sans-serif;
+    font-size: 16px;
+    color: #F2EADB;
+    padding-left: 27px;
+    box-sizing: border-box;
+    padding-top: 4px;
+    position: absolute;
+    top: 110px;
+    left: 20px;
+    z-index: 100;
 }
 
 /*Loader*/

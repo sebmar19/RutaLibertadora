@@ -5,7 +5,7 @@
                 fill: #80a8a3;
             }
 
-            .btn-nav-mapa:hover .cls-1 {
+            .btn-nav-mapa:hover img .cls-1 {
                 fill: #FFE7B5;
             }
 
