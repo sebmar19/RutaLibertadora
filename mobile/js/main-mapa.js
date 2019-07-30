@@ -25,6 +25,7 @@ function entrarBatalla() {
     $(".btn-mapa-der").on("click", avanzarRuta);
     $(".btn-mapa-izq").on("click", retrocederRuta);
     $(".btn-salir").on("click", desertar);
+    $(".btn-regresar").on("click", esconderDesertar);
 }
 //Esta función sirve para avanzar a través de los puntos de la Ruta
 //Apenas Inicia, aumenta en 1 el valor del punto actual y guarda en infoPuntoActual el Objeto correspondiente a ese punto
@@ -264,6 +265,10 @@ function retrocederRuta() {
 function desertar() {
 
     $(".lightbox-salir-cont").fadeIn(300);
+}
+
+function esconderDesertar() {
+    $(".lightbox-salir-cont").fadeOut(300);
 }
 
 

@@ -244,7 +244,8 @@ button:active {
     left: 0;
 }
 
-.lightbox-salir-cont {
+.lightbox-salir-cont,
+.light-video {
     display: none;
 }
 
@@ -318,7 +319,9 @@ button:active {
     margin-top: 40px;
 }
 
-.btn-entrar-batalla:hover {
+.btn-entrar-batalla:hover,
+.btn-retirarse:hover,
+.btn-regresar:hover {
     background: url(../img/btn-light-hover.svg);
     color: #334520;
 }
