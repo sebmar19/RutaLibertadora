@@ -273,9 +273,17 @@ function esconderDesertar() {
 
 
 function finalizar() {
-
+    setTimeout(function () {
+        mostrarVideo();
+    }, 300);
 }
 
+
+function mostrarVideo() {
+
+    $(".light-video").fadeIn(300);
+
+}
 //Esta función permite animar los números, los parámetros que recibe son: el número inicial, el número final, la etiqueta donde se cambia el texto, el complemento para el texto, y la velocidad de cambio
 function animarNumeros(inicial, final, destino, complemento, vel) {
 
