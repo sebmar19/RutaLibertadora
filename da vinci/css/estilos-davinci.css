@@ -1,0 +1,684 @@
+/* CSS Document */
+body{
+	margin:0;
+	padding: 0;
+	
+}
+.especialesModulares .Infografia .infographyContainer {
+    margin: 0;
+}
+.container-info{
+	margin: auto;
+    background: url("../img/fondo-parejo.jpg");
+    background-size: 100% auto;
+    background-position-x: center;
+	font-family: classica-pro, serif;
+	color:#4B2900;
+    line-height: 1.6em;
+
+}
+.banner-info{
+	    width: 100%;
+	
+
+}
+.banner-info img{
+	   margin: auto;
+    width: 80%;
+	max-width: 1000px;
+    display: block;
+}
+.sumario-info {
+	width: 60%;
+	max-width: 1200px;
+    display: block;
+    margin: auto;
+    overflow: auto;
+    margin-bottom: 90px;
+}
+.sumario-intro {
+	width: 40%;
+	font-size: 24px;
+    float: left;
+    display: block;
+    clear: none;
+    margin-top: 30px;
+	padding: 0 50px;
+	box-sizing: border-box;
+	text-align: right;
+}
+.sumario-text-cont {
+	width:60%;
+    float: left;
+    display: block;
+    clear: none;
+    box-sizing: border-box;
+    padding-left: 40px;
+    border-left: 2px solid #4B2900;
+}
+.sumario-text {
+	width: 100%;
+    margin:0;
+}
+.grafico-info {
+	    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+.grafico-info img{
+	width: 80%;
+    margin: auto;
+    display: block;
+}
+
+.titulo-grafico {
+	font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 0;
+    text-align: left;
+    margin-left: 30px;
+        margin-top: 0;
+}
+img.nota-img{
+        width: 60%;
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 40px;
+}
+.intro-text-vitru {
+    width: 50%;
+    margin: 10px auto 50px;
+    text-align: center;
+}
+.grafico-info p{
+	width:70%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.vitru-wrapper{
+	width:800px;
+	height: 800px;
+	margin: auto;
+	background: url("../img/da-vinci-fondo-opaco.png");
+	background-size: cover;
+	position: relative;
+}
+.vitru-dato{
+	    position: absolute;
+    z-index: 30;
+    width: 320px;
+    margin-left: -110px;
+    background: rgba(0,0,0,0.5);
+    border-top-left-radius: 200px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 20px;
+	display: none;
+}
+.vitru-dato-inicial{
+	position: absolute;
+    z-index: 30;
+    width: 360px;
+    margin-left: -110px;
+    box-sizing: border-box;
+    padding: 16px;
+    background: rgba(75,41,0,0.8);
+    border-radius: 20px;
+	border-top-left-radius: 0px;
+}
+.vitru-dato img{
+	float:left;
+	margin-top: -13px;
+}
+.vitru-dato .titulo-dato{
+	font-size: 20px;
+	margin-top:10px;
+	margin-bottom:6px;
+	color:#E2CD9B;
+	font-weight: normal;
+}
+.vitru-dato-inicial .titulo-dato{
+	margin-top: -39px;
+    margin-bottom: 0;
+    background-color: #E2CD9B;
+    width: 165px;
+    margin-left: -16px;
+    padding: 8px;
+    font-size: 16px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.vitru-dato-inicial p{
+	    color: #FFF;
+    font-size: 13px;
+}
+.vitru-circ{
+	width:800px;
+	height: 800px;
+	margin:auto;
+	border-radius: 500px;
+	position: relative;
+	overflow: hidden;
+	background: url("../img/da-vinci-fondo.png");
+	background-size: cover;
+}
+.vitru-area{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left: 0;
+	background: url("../img/da-vinci-fondo.png");
+	background-size: cover;
+}
+.vitru-izq{
+	left:-100%;
+	background: url("../img/da-vinci-fondo-opaco.png");
+	background-size: cover;
+	overflow:hidden;
+
+}
+.vitru-der{
+	left:100%;
+	background: url("../img/da-vinci-fondo-opaco.png");
+	background-size: cover;
+	overflow:hidden;
+}
+.vitru-top{
+	top:-100%;
+	background: url("../img/da-vinci-fondo-opaco.png");
+	background-size: cover;
+	overflow:hidden;
+}
+
+.btn-areas-cont{
+	width: 100%;
+    height: 100%;
+}
+.btn-area{
+    position: absolute;
+    background: none;
+    border:none;
+    font-family: classica-pro, serif;
+    color:#4B2900;
+    font-size: 20px;
+    cursor: pointer;
+}
+.btn-area:focus{
+    outline:0;
+}
+.btn-circ{
+    width:30px;
+    height: 30px;
+    background:#4B2900;
+    color: #E2CD9B;
+    margin: auto;
+    border-radius: 30px;
+    
+}
+.btn-izq{
+	top:50%;
+	left:10%;
+	width: 20%;
+}
+.btn-der{
+	top:50%;
+	right:10%;
+	width: 20%;
+}
+.btn-top{
+	top:7%;
+	right:40%;
+	width: 20%;
+}
+.btn-cerrar{
+	position: absolute;
+    width: 13%;
+    height: 5%;
+    right: 43.5%;
+    top: 4%;
+	cursor: pointer;
+
+}
+.cerrar-icon-davinci{
+	width: 25px;
+    height: 25px;
+    background: #4B2900;
+    float: left;
+    margin-right: 10px;
+    border-radius: 20px;
+    color: #FFF;
+    box-sizing: border-box;
+    text-align: center;
+        line-height: 1.4em;
+        margin-top: -3px;
+}
+.btn-influencias-cont{
+    width: 53%;
+    display: block;
+    margin: auto;
+    overflow: visible;
+}
+.btn-influencia{
+	float: left;
+    clear: none;
+    display: block;
+    text-align: center;
+    margin: 0px 19px;
+    width: 102px;
+    height: 102px;
+    border: 12px solid #E2CD9B;
+    box-sizing: border-box;
+    border-radius: 100px;
+	mix-blend-mode: multiply;
+	cursor: pointer;
+}
+.btn-influencia-activo{
+	border: 12px solid #81290D;
+}
+.btn-influencia:hover{
+	border: 12px solid #81290D;
+	color: #81290D;
+	mix-blend-mode: multiply;
+}
+
+.influencia-img img{
+	margin-top:70px;
+	margin-left: 50px;
+	    height: 380px;
+}
+.influencia-text{
+	margin:0;
+	margin-top: 15px;
+}
+.btn-influencia img {
+    width: 80px;
+	border-radius: 80px;
+	margin-top:-1px;
+}
+.influencia-scroll-cont{
+	    width: 132px;
+    margin: auto;
+}
+.scroll-btn{
+	width: 20px;
+    height: 20px;
+    border-radius: 30px;
+    border: 2px solid #4B2900;
+    float: left;
+    margin: 0 10px;
+	cursor: pointer;
+}
+.scroll-btn-activo{
+	background:  #4B2900;
+}
+.titulo-influencia{
+	position: relative;
+    z-index: 10;
+    text-align: center;
+    height: 29px;
+    width: 15%;
+    margin: auto;
+    margin-top: 112px;
+    background: #71742E;
+    color: #E2CD9B;
+    font-size: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  
+}
+.vitru-izq .titulo-influencia{
+	background: #507499;
+}
+.vitru-der .titulo-influencia{
+	background: #81290D;
+}
+.vitru-centro{
+	left:0;
+	top:0;
+}
+
+.titulo-linea-cont {
+	width: 60%;
+    display: block;
+    margin: auto;
+    text-align: center;
+        margin-bottom: 10px;
+    
+
+}
+.titulo-linea {
+	font-size: 24px;
+    font-weight: 700;
+        margin-bottom: 0px;
+    margin-top: 30px;
+}
+.titulo-linea-cont p{
+	margin: 0;
+    
+}
+.linea-obras-cont{
+	position: relative;
+}
+.linea-fechas{
+	width: 8000px;
+    height: 20%;
+    background: url(../img/fechas.png);
+    background-size: auto 102.5%;
+    background-position-x: left;
+    background-repeat: no-repeat;
+}
+.linea-obras{
+	width: 8000px;
+	height: 80%;
+}
+.linea-obras-wrapper{
+	height: 350px;
+    overflow: hidden;
+	-webkit-mask-image: -webkit-gradient(linear, left top, right top, color-stop(5%, rgba(0,0,0,0)), color-stop(30%, rgba(0,0,0,1)), color-stop(70%, rgba(0,0,0,1)), color-stop(95%, rgba(0,0,0,0)));
+
+}
+.obra{
+	width: 179px;
+	height: 98%;
+	border-radius: 10px;
+	margin: 0 3px;
+	float:left;
+	box-shadow: 3px 3px 2px rgba(0,0,0,0.4);
+	overflow: hidden;
+}
+.obra-hover{
+	background: rgba(0,0,0,0.4);
+	width: 100%;
+	height: 100%;
+	float: left;
+	opacity: 0;
+	transition: 0.3s;
+}
+.obra-hover:hover{
+	opacity: 1;
+}
+.filtro-hover{
+	width: 80%;
+	height: 86%;
+	margin: 10% 10%;
+	float: left;
+	background: rgba(0,0,0,0.4);
+    line-height: 1em;
+}
+.obra-fecha{
+	color: rgba(255,255,255,0.5);
+	font-size: 67px;
+    margin: 0;
+    line-height: 1em;
+}
+.obra-nombre{
+	color: rgba(255,255,255,1);
+	text-align: center;
+}
+.btn-obra{
+	width: 30px;
+    height: 30px;
+    background: #FFF;
+    border-radius: 30px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: auto;
+    font-size: 21px;
+    font-weight: 700;
+	cursor: pointer;
+    line-height: 1.4em;
+}
+.intro-titu-vitru {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 24px;
+}
+.light-obra-cont{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: rgba(0,0,0,0.7);
+	top:0;
+	left: 0;
+	display: none;
+	z-index: 20;
+}
+.light-obra-texto {
+	float: left;
+    clear: none;
+    display: block;
+    width: 30%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: 15%;
+    background: #EFE5CA;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.light-obra-texto h6{
+	    font-size: 28px;
+    margin: 0;
+        margin-bottom: 15px;
+}
+.light-cerrar{
+	width: 30px;
+	height: 30px;
+	border:2px solid #EFE5CA; 
+	border-radius: 30px;
+	padding: 6px;
+    box-sizing: border-box;
+    text-align: center;
+	margin: auto;
+	margin-top: 50px;
+	cursor: pointer;
+		
+}
+.light-info{
+	    width: 80%;
+    margin: auto;
+    height: 80%;
+}
+.light-img-cont{
+	width: 60%;
+    height: 95%;
+    margin-top: 5%;
+        float: left;
+    clear: none;
+    display: block;
+    box-shadow: 5px 0px 3px -3px rgba(0,0,0,0.7);
+}
+
+  #cross {
+    background: #EFE5CA;
+    height: 20px;
+    position: relative;
+    width: 6px;
+    margin-left: 4px;
+    transform: rotate(45deg);
+    margin-top: -3px;
+
+    }
+    #cross:after {
+    background: #EFE5CA;
+    content: "";
+    height: 6px;
+    left: -7px;
+    position: absolute;
+    top: 8px;
+    width: 20px;
+    }
+.flecha{
+	width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    text-align: center;
+    padding: 0px;
+    box-sizing: border-box;
+    background: #FFF;
+    position: absolute;
+    margin-top: 190px;
+    z-index: 10;
+    cursor: pointer;
+    font-size: 34px;
+    line-height: 1.4em;
+	opacity: 0.7;
+}
+.flecha-izq{
+	float: left;
+	left: 168px;
+	
+}
+.flecha-der{
+	float:right;
+	right: 168px;
+}
+.fuente-titulo{
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    margin-top: 15px;
+}
+.flecha-vitru {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    text-align: center;
+    padding: 0px;
+    box-sizing: border-box;
+    background: #FFF;
+    position: absolute;
+    margin-top: -320px;
+    z-index: 10;
+    cursor: pointer;
+    font-size: 34px;
+    opacity: 0.7;
+        line-height: 1.4em;
+}
+.flecha-vitru-izq{
+	float: left;
+	left: 16px;
+	
+}
+.flecha-vitru-der{
+	float:right;
+	right: 24px;
+}
+.fuente-text {
+	    font-size: 13px;
+    font-style: italic;
+    width: 70%;
+    margin: auto;
+    margin-top: 4px;
+    text-align: justify;
+}
+.fuente-text:last-child {
+	text-align: center;
+}
+img.da-vinci-pop {
+	    width: 20%;
+    margin-left: 20%;
+    float: left;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.4);
+}
+.grafico-tit-der {
+	    width: 60%;
+    float: left;
+}
+.grafico-tit-der p{
+	text-align: left;
+    margin-left: 30px;
+}
+.pop-vitru, .pop-inedit {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    z-index: 30;
+    display: none;
+}
+.pop-img {
+	width: 40%;
+    height: auto;
+    margin-top: 10%;
+    margin: auto;
+}
+.pop-img img{
+	width: 100%;
+}
+.socialTab{
+    width: 160px;
+    margin: auto; 
+        margin-top: -30px;
+    margin-bottom: 60px;
+}
+.socialTab li{
+	    display: block;
+    float: left;
+    width: 60px;
+    margin-left: 10px;
+}
+
+.dibujo-inedit-cont {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 40px;
+    background: rgba(0,0,0,0.55);
+    font-family: "Classica";
+    color: #FFF;
+    padding: 0px 10%;
+    box-sizing: border-box;
+}
+.inedit-titulo {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    line-height: 1.3em;
+}
+.inedit-info {
+    width: 60%;
+    float: left;
+    text-align: center;
+    margin-left: 0;
+        margin-top: 36px;
+}
+.inedit-creditos {
+	font-size: 14px;
+    font-style: italic;
+}
+.imagen-inedit{
+        width: 20%;
+        max-width: 227px;
+    float: left;
+    display: block;
+    clear: none;
+        margin-left: 10%;
+    position: relative;
+    cursor: pointer;
+}
+.imagen-inedit img {
+    width: 100%;
+    max-width: 327px;
+    margin: auto;
+}
+.imagen-inedit-btn{
+
+    width: 30px;
+    height: 30px;
+    background: #4B2900;
+    color: #E2CD9B;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    font-size: 27px;
+    text-align: center;
+}
