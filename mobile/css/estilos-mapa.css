@@ -47,11 +47,12 @@ button:active {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(../img/mapa-boceto.jpg);
+    background-image: url(../img/mapa_ruta-libertadora.jpg);
+
     background-position: center;
-    background-size: contain;
+    background-size: auto 100%;
     background-repeat: no-repeat;
-    transition: 2s;
+    transition: 20s;
 
 }
 
@@ -124,6 +125,8 @@ button:active {
     font-family: "Tabac Sans", sans-serif;
     font-weight: 600;
     text-align: right;
+    font-size: 14px;
+
 }
 
 .num-texto {
@@ -368,20 +371,6 @@ button:active {
 
 /*Blur*/
 
-.blur {
-    animation: blur 250ms;
-}
-
-@keyframes blur {
-    0% {
-        -webkit-filter: blur(0px);
-    }
-
-    50% {
-        -webkit-filter: blur(5px);
-    }
-
-    100% {
-        -webkit-filter: blur(0px);
-    }
+footer {
+    display: none;
 }

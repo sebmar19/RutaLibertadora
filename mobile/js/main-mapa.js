@@ -11,7 +11,7 @@ var infoMapa;
 var puntoMapa = 0;
 
 $(document).ready(function () {
-    $.getJSON("https://embed.eltiempo.digital/infografias/2019/08/ruta-libertadora/data/data.json?fsvs", function (data) {
+    $.getJSON("https://embed.eltiempo.digital/infografias/2019/08/ruta-libertadora/data/data.json?fsvsera", function (data) {
         infoMapa = data;
         console.log(infoMapa);
     });
@@ -26,6 +26,7 @@ function entrarBatalla() {
     $(".btn-mapa-izq").on("click", retrocederRuta);
     $(".btn-salir").on("click", desertar);
     $(".btn-regresar").on("click", esconderDesertar);
+    $(".bicente-audio").get(0).play();
 }
 //Esta función sirve para avanzar a través de los puntos de la Ruta
 //Apenas Inicia, aumenta en 1 el valor del punto actual y guarda en infoPuntoActual el Objeto correspondiente a ese punto
@@ -43,7 +44,7 @@ function avanzarRuta() {
 
 
     if (puntoMapa == 1) {
-
+        reproducirAudio(puntoMapa);
         var coordenadas = infoMapa[puntoMapa].coordenadas;
 
         coordenadas = coordenadas.split(",");
@@ -54,8 +55,9 @@ function avanzarRuta() {
         $(".num-titulo").fadeIn(200);
         $(".tem-titulo").fadeIn(200);
         $(".altimetrias").fadeIn(200);
-        $("#mapa-imagen-container").css("background-image", "url(../img/mapa-boceto-m.jpg)");
-        $("#mapa-imagen-container").css("background-size", "660%");
+        //$("#mapa-imagen-container").css("background-image", "url(https://embed.eltiempo.digital/infografias/2019/08/ruta-libertadora/mobile/img/mapa_ruta-libertadora.jpg)");
+        console.log($("#mapa-imagen-container").css("background-size"));
+        $("#mapa-imagen-container").css("background-size", "auto 300%");
         $("#mapa-imagen-container").css("background-position", coordenadas[0] + "% " + coordenadas[1] + "%");
 
         $('#mapa-imagen-container').addClass('blur');
@@ -63,6 +65,7 @@ function avanzarRuta() {
         setTimeout(function () {
             $('#mapa-imagen-container').removeClass('blur');
         }, 250);
+
     }
 
     var numPuntos = Object.keys(infoMapa).length;
@@ -73,6 +76,7 @@ function avanzarRuta() {
 
 
         if (infoPuntoActual.tipo == "Parada") {
+            reproducirAudio(puntoMapa);
             //Cambio de datos
             $("#fecha-mapa").html(infoPuntoActual.fecha + " de 1819");
             animarNumeros(soldadosAct, infoPuntoActual.numeroSoldados, $(".barra-soldados .num-texto"), "", 2000);
@@ -106,6 +110,7 @@ function avanzarRuta() {
 
 
         } else if (infoPuntoActual.tipo == "Batalla") {
+            reproducirAudio(puntoMapa);
             $(".btn-mapa-der").off("click", avanzarRuta);
             $(".btn-mapa-izq").off("click", retrocederRuta);
             //Cambio de datos
@@ -148,7 +153,6 @@ function avanzarRuta() {
             setTimeout(function () {
                 $('#mapa-imagen-container').removeClass('blur');
             }, 250);
-
 
         }
     } else {
@@ -176,6 +180,7 @@ function retrocederRuta() {
         coordenadas = coordenadas.split(",");
 
         if (infoPuntoActual.tipo == "Parada") {
+            reproducirAudio(puntoMapa);
             //Cambio de datos
             $("#fecha-mapa").html(infoPuntoActual.fecha + " de 1819");
             animarNumeros(soldadosAct, infoPuntoActual.numeroSoldados, $(".barra-soldados .num-texto"), "", 2000);
@@ -209,6 +214,7 @@ function retrocederRuta() {
 
 
         } else if (infoPuntoActual.tipo == "Batalla") {
+            reproducirAudio(puntoMapa);
             $(".btn-mapa-der").off("click", avanzarRuta);
             $(".btn-mapa-izq").off("click", retrocederRuta);
             //Cambio de datos
@@ -251,7 +257,6 @@ function retrocederRuta() {
             setTimeout(function () {
                 $('#mapa-imagen-container').removeClass('blur');
             }, 250);
-
 
         }
     } else {
@@ -283,6 +288,42 @@ function mostrarVideo() {
 
     $(".light-video").fadeIn(300);
 
+}
+
+function reproducirAudio(num) {
+    switch (num) {
+        case 1:
+            reemplazarAudio("https://embed.eltiempo.digital/infografias/2019/08/ruta-libertadora/audios/Bicente-7-de-agosto_Tame.mp3");
+            break;
+
+        case 2:
+            reemplazarAudio("https://embed.eltiempo.digital/infografias/2019/08/ruta-libertadora/audios/Bicente-7-de-agosto_Paya.mp3");
+            break;
+        case 3:
+            reemplazarAudio("https://embed.eltiempo.digital/infografias/2019/08/ruta-libertadora/audios/Bicente-7-de-agosto_Pisba.mp3");
+            break;
+        case 4:
+            reemplazarAudio("https://embed.eltiempo.digital/infografias/2019/08/ruta-libertadora/audios/Bicente-7-de-agosto_Socha.mp3");
+            break;
+        case 5:
+            reemplazarAudio("https://embed.eltiempo.digital/infografias/2019/08/ruta-libertadora/audios/Bicente-7-de-agosto_Gameza-Topaga.mp3");
+            break;
+        case 6:
+            reemplazarAudio("https://embed.eltiempo.digital/infografias/2019/08/ruta-libertadora/audios/Bicente-7-de-agosto_Pantano-de-Vargas.mp3");
+            break;
+        case 7:
+            reemplazarAudio("https://embed.eltiempo.digital/infografias/2019/08/ruta-libertadora/audios/Bicente-7-de-agosto_Sogamoso.mp3");
+            break;
+        case 8:
+            reemplazarAudio("https://embed.eltiempo.digital/infografias/2019/08/ruta-libertadora/audios/Bicente-7-de-agosto_Puente-de-Boyaca.mp3");
+            break;
+    }
+}
+
+function reemplazarAudio(audio) {
+    $(".bicente-audio source").attr("src", audio);
+    $(".bicente-audio").get(0).load();
+    $(".bicente-audio").get(0).play();
 }
 //Esta función permite animar los números, los parámetros que recibe son: el número inicial, el número final, la etiqueta donde se cambia el texto, el complemento para el texto, y la velocidad de cambio
 function animarNumeros(inicial, final, destino, complemento, vel) {
