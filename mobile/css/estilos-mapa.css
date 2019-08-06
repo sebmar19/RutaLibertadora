@@ -47,11 +47,10 @@ button:active {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(../img/mapa_ruta-libertadora.jpg);
-
+    background-image: url(../img/mapa_ruta-libertadora-3.jpg?dsuyts);
+    background-repeat: no-repeat;
     background-position: center;
     background-size: auto 100%;
-    background-repeat: no-repeat;
     transition: 20s;
 
 }
@@ -63,7 +62,7 @@ button:active {
     position: absolute;
     left: 50%;
     margin-left: -111px;
-    top: 50px;
+    top: 10px;
     z-index: 300;
 }
 
@@ -88,6 +87,16 @@ button:active {
     box-sizing: border-box;
 }
 
+.fondo-info-alti {
+
+    width: 110%;
+    height: 141px;
+    position: absolute;
+    bottom: 0;
+    left: -5%;
+    background: rgba(255, 255, 255, 0.5);
+}
+
 .btn-nav-mapa img {
     width: 80%;
 }
@@ -98,14 +107,15 @@ button:active {
 
 .btn-mapa-izq {
     left: -30px;
+    display: none;
 }
 
 .modulo-info-mapa {
     width: 94%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     right: 3%;
-    top: 0;
+    bottom: 0;
 }
 
 .soldados {
@@ -157,7 +167,7 @@ button:active {
 .altimetrias {
     width: 100%;
     height: 14%;
-    background: url(../img/altimetria.svg);
+    background: url(../img/altimetria.png);
     background-size: 100%;
     background-repeat: no-repeat;
     bottom: 5px;
@@ -340,7 +350,7 @@ button:active {
     box-sizing: border-box;
     padding-top: 4px;
     position: absolute;
-    top: 110px;
+    top: 60px;
     left: 20px;
     z-index: 100;
 }
@@ -369,8 +379,26 @@ button:active {
     margin-top: 30px;
 }
 
-/*Blur*/
+/*Resaltar*/
+
+.resaltar {
+    animation: resaltar 0.5s ease-in-out 0s infinite alternate;
+}
+
+@keyframes resaltar {
+    from {
+        background-color: #C23032;
+    }
+
+    to {
+        background-color: #DFAE59;
+    }
+}
 
 footer {
+    display: none;
+}
+
+.publicidad {
     display: none;
 }

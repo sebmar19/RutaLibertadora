@@ -27,6 +27,12 @@ function entrarBatalla() {
     $(".btn-salir").on("click", desertar);
     $(".btn-regresar").on("click", esconderDesertar);
     $(".bicente-audio").get(0).play();
+
+
+    setTimeout(function () {
+        $(".btn-mapa-der").addClass("resaltar");
+    }, 20000);
+
 }
 //Esta función sirve para avanzar a través de los puntos de la Ruta
 //Apenas Inicia, aumenta en 1 el valor del punto actual y guarda en infoPuntoActual el Objeto correspondiente a ese punto
@@ -40,13 +46,18 @@ function avanzarRuta() {
 
 
     puntoMapa++;
-
+    if ($(".btn-mapa-der").hasClass("resaltar")) {
+        $(".btn-mapa-der").removeClass("resaltar");
+    }
 
 
     if (puntoMapa == 1) {
+
+
+
+
         reproducirAudio(puntoMapa);
         var coordenadas = infoMapa[puntoMapa].coordenadas;
-
         coordenadas = coordenadas.split(",");
 
         $(".altimetria-num").fadeIn(200);
@@ -67,7 +78,9 @@ function avanzarRuta() {
         }, 250);
 
     }
-
+    if (puntoMapa == 2) {
+        $(".btn-mapa-izq").fadeIn(300);
+    }
     var numPuntos = Object.keys(infoMapa).length;
     if (puntoMapa <= numPuntos) {
         var infoPuntoActual = infoMapa[puntoMapa];
@@ -173,6 +186,7 @@ function retrocederRuta() {
 
 
     puntoMapa--;
+
     var numPuntos = Object.keys(infoMapa).length;
     if (puntoMapa > 0) {
         var infoPuntoActual = infoMapa[puntoMapa];
@@ -259,8 +273,8 @@ function retrocederRuta() {
             }, 250);
 
         }
-    } else {
-        puntoMapa = 1;
+    } else if (puntoMapa <= 0) {
+        puntoMapa = 0;
         //finalizar();
     }
 
@@ -312,7 +326,7 @@ function reproducirAudio(num) {
             reemplazarAudio("https://embed.eltiempo.digital/infografias/2019/08/ruta-libertadora/audios/Bicente-7-de-agosto_Pantano-de-Vargas.mp3");
             break;
         case 7:
-            reemplazarAudio("https://embed.eltiempo.digital/infografias/2019/08/ruta-libertadora/audios/Bicente-7-de-agosto_Sogamoso.mp3");
+            reemplazarAudio("https://embed.eltiempo.digital/infografias/2019/08/ruta-libertadora/audios/Bicente-7-de-agosto_Bonza.mp3");
             break;
         case 8:
             reemplazarAudio("https://embed.eltiempo.digital/infografias/2019/08/ruta-libertadora/audios/Bicente-7-de-agosto_Puente-de-Boyaca.mp3");
